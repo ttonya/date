@@ -188,10 +188,12 @@ export class dateObject {
 	}
 }
 
-export default function date(dateString: string) {
+let date = (dateString?: string) => {
 	return new dateObject(dateString);
-}
+};
 
 export let setDateFormat = (format: string) => {
 	dateFormat = format;
 };
+
+export default date();

@@ -45,7 +45,7 @@ date("Wed Sep 30 2020 14:44:09 GMT+0300").timeDifference(
 
 ## Info
 
-For keepping this library extra light locales are omitted
+For keepping this library extra light locales are omitted.
 In case you need to get a day of the week or write a full month name
 you can get number of the week day or a month number with this formatting
 and add month name or a weekday in your language
