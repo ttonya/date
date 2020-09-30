@@ -1,9 +1,9 @@
 let dateFormat: string = "";
 
 export class dateObject {
-	date: Date;
+	currentDate: Date;
 	constructor(dateString: string) {
-		this.date = new Date(dateString);
+		this.currentDate = new Date(dateString);
 	}
 
 	regExp: any = /[.\- /:]/;
@@ -35,7 +35,7 @@ export class dateObject {
 		let newDate = format;
 		this.allFormats.map((value) => {
 			if (formats.indexOf(value) !== -1) {
-				let newValue: any = this.formatValue(this.date, value);
+				let newValue: any = this.formatValue(this.currentDate, value);
 				newDate = newDate.replace(value, newValue);
 			}
 		});
@@ -50,18 +50,18 @@ export class dateObject {
 	isDateAfter(compareTo: string | Date) {
 		let secondDate = this.checkAndReturnDate(compareTo);
 
-		return this.date.getTime() > secondDate.getTime();
+		return this.currentDate.getTime() > secondDate.getTime();
 	}
 
 	isDateBefore(compareTo: string | Date) {
 		let secondDate = this.checkAndReturnDate(compareTo);
 
-		return this.date.getTime() < secondDate.getTime();
+		return this.currentDate.getTime() < secondDate.getTime();
 	}
 
 	timeDifference(compareTo: string | Date, format: string) {
 		let secondDate = this.checkAndReturnDate(compareTo);
-		let milliseconds = this.date.getTime() - secondDate.getTime();
+		let milliseconds = this.currentDate.getTime() - secondDate.getTime();
 
 		return this.convertMiliseconds(milliseconds, format);
 	}
