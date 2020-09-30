@@ -1,23 +1,23 @@
-# date-js
+# date-ts
 
 Extra light package for working with dates
 
 ## Installation
 
-Use the package manager [npm](https://www.npmjs.com/package/npm) to install date-js.
+Use the package manager [npm](https://www.npmjs.com/package/npm) to install date-ts.
 
 ```bash
-npm install date-js
+npm install date-ts
 ```
 
 ## Usage
 
 ```javascript
-let date = require("date-js");
+let date = require("date-ts");
 
 // or
 
-import date, { setDateFormat } from "date-js";
+import date, { setDateFormat } from "date-ts";
 
 // format date
 date("Wed Sep 30 2020 14:44:09 GMT+0300").format();
@@ -29,6 +29,18 @@ setDateFormat("DD/MM/YYYY"); // default 'MM/DD/YYYY';
 date("Wed Sep 30 2020 14:44:09 GMT+0300").format("hh:mm"); // 2:44 PM
 date("Wed Sep 30 2020 14:44:09 GMT+0300").format("HH:mm"); // 14:44
 date("Wed Sep 30 2020 14:44:09 GMT+0300").format("DD-MM-YY"); // 30-09-20
+
+//compare dates
+date("Wed Sep 30 2020 14:44:09 GMT+0300").isDateBefore(
+	"Wed Oct 7 2020 14:44:09 GMT+0300"
+);
+date("Wed Sep 30 2020 14:44:09 GMT+0300").isDateAfter(
+	"Wed Oct 7 2020 14:44:09 GMT+0300"
+);
+date("Wed Sep 30 2020 14:44:09 GMT+0300").timeDifference(
+	"Wed Oct 7 2020 14:44:09 GMT+0300",
+	"hh:mm"
+);
 ```
 
 ## Info

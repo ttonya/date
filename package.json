@@ -1,5 +1,5 @@
 {
-	"name": "date-js",
+	"name": "date-ts",
 	"version": "1.0.0",
 	"description": "Extra light package for working with dates",
 	"main": "dist/date.js",
