@@ -1,6 +1,6 @@
 {
 	"name": "date-ts",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Extra light package for working with dates",
 	"main": "dist/date.js",
 	"types": "dist/date.d.ts",
