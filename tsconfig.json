@@ -1,17 +1,10 @@
 {
 	"compilerOptions": {
-		"baseUrl": ".",
 		"target": "es5",
 		"module": "commonjs",
 		"declaration": true,
-		"paths": {
-			"src": ["./src"]
-		},
 		"rootDir": "./",
-		"outDir": "./dist",
-		"esModuleInterop": true,
-		"resolveJsonModule": true,
-		"allowSyntheticDefaultImports": true
+		"outDir": "./dist"
 	},
 	"include": ["./src/*"]
 }
