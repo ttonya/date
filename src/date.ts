@@ -2,8 +2,9 @@ let dateFormat: string = "";
 
 export class dateObject {
 	date: Date;
-	constructor(dateString: string) {
-		this.date = new Date(dateString);
+	constructor(dateString?: string) {
+		let date = dateString ? dateString : "";
+		this.date = new Date(date);
 	}
 
 	regExp: any = /[.\- /:]/;
@@ -40,7 +41,7 @@ export class dateObject {
 			}
 		});
 
-		if (format.indexOf("HH") !== -1) {
+		if (format.indexOf("hh") !== -1) {
 			newDate = `${newDate} ${this.midday}`;
 		}
 
