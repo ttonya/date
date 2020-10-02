@@ -40,7 +40,7 @@ export class dateObject {
 			}
 		});
 
-		if (formatString.indexOf("HH") !== -1) {
+		if (format.indexOf("HH") !== -1) {
 			newDate = `${newDate} ${this.midday}`;
 		}
 
